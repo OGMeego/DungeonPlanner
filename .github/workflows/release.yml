@@ -1,0 +1,33 @@
+# Makes a release with a ready-to-install zip whenever the addon's version number changes.
+# Added at the owner's request so new versions are published without manual steps.
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths: ["DungeonPlanner/DungeonPlanner.toc"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read the version
+        id: v
+        run: echo "version=$(grep -m1 '^## Version:' DungeonPlanner/DungeonPlanner.toc | sed 's/## Version: *//' | tr -d '\r ')" >> "$GITHUB_OUTPUT"
+      - name: Make the release (skipped if this version already has one)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            echo "v$VERSION already released"; exit 0
+          fi
+          zip -qr "DungeonPlanner-$VERSION.zip" DungeonPlanner
+          gh release create "v$VERSION" "DungeonPlanner-$VERSION.zip" \
+            --title "Dungeon Planner $VERSION" \
+            --notes "Download **DungeonPlanner-$VERSION.zip** below, open it, and copy the \`DungeonPlanner\` folder into the \`Interface/AddOns\` folder of your WoW Forever install."
