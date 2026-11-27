@@ -1,0 +1,23 @@
+name: Report a problem
+description: Something in Dungeon Planner is wrong or broken.
+title: "Problem: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead? Screenshots help a lot (drag them in here).
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Report text (optional)
+      description: In the game type /dp bug, copy the text and paste it here.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Dungeon Planner version
+      placeholder: "5.2.45"

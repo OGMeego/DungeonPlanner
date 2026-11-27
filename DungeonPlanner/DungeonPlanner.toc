@@ -1,0 +1,142 @@
+## Interface: 16001, 120105
+## Title: Dungeon Planner
+## Notes: Everything for dungeons in one addon: a smarter Group Finder, a dungeon journal with quests and loot, gear upgrades and an in-dungeon tracker.
+## Author: Dungeon Planner Team
+## Version: 5.2.46
+## Category: Group Finder
+## IconTexture: Interface\Icons\INV_Misc_Map_01
+## SavedVariables: DungeonPlannerDB
+## SavedVariablesPerCharacter: DungeonPlannerCharDB
+## AddonCompartmentFunc: DungeonPlanner_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: DungeonPlanner_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: DungeonPlanner_OnAddonCompartmentLeave
+## X-License: GPL-3.0-or-later
+## X-Credits: Dungeon data derived from CMaNGOS classic-db (GPL-3.0) and pfQuest by Shagu (MIT). See CREDITS.md.
+
+Libs\LibDeflate.lua
+
+Locales\enUS.lua
+Locales\deDE.lua
+Locales\frFR.lua
+Locales\esES.lua
+Locales\itIT.lua
+Locales\ptBR.lua
+Locales\ruRU.lua
+Locales\koKR.lua
+Locales\zhCN.lua
+Locales\zhTW.lua
+Locales\Notes\deDE.lua
+Locales\Notes\frFR.lua
+Locales\Notes\esES.lua
+Locales\Notes\itIT.lua
+Locales\Notes\ptBR.lua
+Locales\Notes\ruRU.lua
+Locales\Notes\koKR.lua
+Locales\Notes\zhCN.lua
+Locales\Notes\zhTW.lua
+
+Core\Namespace.lua
+Core\Events.lua
+Core\SavedVariables.lua
+
+Data\DungeonDB.lua
+Data\ForeverLoot.lua
+Data\QuestExtra.lua
+Data\Tier05.lua
+Data\ForeverDB.lua
+Services\ForeverText.lua
+Data\Floors.lua
+Data\DJMaps.lua
+Data\BossArt.lua
+Data\QuestWarnings.lua
+Data\Secrets.lua
+Data\WalkNet.lua
+Data\SafeLanes.lua
+Data\Trails.lua
+Data\QuestTips.lua
+Data\Wings.lua
+Data\Extras.lua
+
+Services\Data.lua
+Services\Maps.lua
+Services\Gear.lua
+Services\LootFilter.lua
+Services\EJ.lua
+Services\Comm.lua
+Services\Finder.lua
+Services\Score.lua
+Services\Inbox.lua
+Services\Quests.lua
+Services\QuestRewards.lua
+Services\QuestData.lua
+Services\VersionCheck.lua
+Services\QuestText.lua
+Services\ForeverQuests.lua
+Services\DungeonList.lua
+Services\ItemSources.lua
+Services\Wishlist.lua
+Services\RunLog.lua
+Services\PartyQuests.lua
+Services\Secrets.lua
+Services\Map\Spec.lua
+Services\Map\Floors.lua
+Services\Map\Placing.lua
+Services\Map\Resolve.lua
+Services\MapDraw\Storage.lua
+Services\MapDraw\Share.lua
+Services\MapDraw\Plans.lua
+Services\Tracker.lua
+Services\Learn.lua
+Services\Route\Positions.lua
+Services\Route\Danger.lua
+Services\Route\Crossings.lua
+Services\Route\WalkNet.lua
+Services\Route\Network.lua
+Services\Route\Planner.lua
+Services\Route\Steps.lua
+Services\Route\Guide.lua
+Services\ChainFollow.lua
+Services\TaintCheck.lua
+Services\Trails.lua
+
+UI\Finder\Widgets.lua
+UI\Finder\Lists.lua
+UI\Finder\Tooltips.lua
+UI\Finder\Actions.lua
+UI\Finder\Rows.lua
+UI\Finder\Refresh.lua
+UI\Finder\Panel.lua
+UI\Finder\Attach.lua
+UI\Finder\Events.lua
+UI\QuestLogOpener.lua
+UI\BugReport.lua
+UI\Journal\PageRegistry.lua
+UI\Journal\RowWidgets.lua
+UI\Journal\LineRow.lua
+UI\Journal\ContentRow.lua
+UI\Journal\NavRow.lua
+UI\Journal\Pages.lua
+UI\Journal\ForeverPages.lua
+UI\Journal\Frame.lua
+UI\Journal\LogsPage.lua
+UI\Journal\WishlistPage.lua
+UI\Journal\PartyPage.lua
+UI\Journal\SecretsPage.lua
+UI\Journal\ExtrasPages.lua
+UI\Journal\SettingsEntry.lua
+UI\Map\Canvas.lua
+UI\Map\Marks.lua
+UI\Map\Draw.lua
+UI\MapDraw\Render.lua
+UI\MapDraw\Input.lua
+UI\MapDraw\Toolbar.lua
+UI\Tracker.lua
+UI\Arrow.lua
+UI\PathDots.lua
+UI\EntrancePins.lua
+UI\TaxiHighlight.lua
+UI\WorldMapButton.lua
+UI\Hub.lua
+UI\Options.lua
+
+Bootstrap.lua

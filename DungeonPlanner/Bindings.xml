@@ -1,0 +1,14 @@
+<Bindings>
+    <Binding name="DUNGEONPLANNER_JOURNAL" header="DUNGEONPLANNER" category="ADDONS">
+        DungeonPlanner_Binding("journal")
+    </Binding>
+    <Binding name="DUNGEONPLANNER_PLANNER" category="ADDONS">
+        DungeonPlanner_Binding("planner")
+    </Binding>
+    <Binding name="DUNGEONPLANNER_MAP" category="ADDONS">
+        DungeonPlanner_Binding("map")
+    </Binding>
+    <Binding name="DUNGEONPLANNER_LOGS" category="ADDONS">
+        DungeonPlanner_Binding("logs")
+    </Binding>
+</Bindings>

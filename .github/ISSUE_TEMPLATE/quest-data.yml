@@ -1,0 +1,23 @@
+name: Send quest data
+description: Paste the quest data Dungeon Planner collected, so everyone gets correct XP and rewards.
+title: "Quest data"
+labels: ["quest-data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping! In the game, open Dungeon Planner's export window, click in the text box, press Ctrl+A then Ctrl+C, and paste it below with Ctrl+V.
+        It contains only game numbers (quests, levels, XP, money, rewards). No character, account or guild names.
+  - type: textarea
+    id: data
+    attributes:
+      label: Quest data
+      description: Paste the whole text from the export window.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Dungeon Planner version (optional)
+      placeholder: "5.2.45"
