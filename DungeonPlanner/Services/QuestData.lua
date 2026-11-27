@@ -11,7 +11,7 @@ local L = ns.L
 local D = {}
 ns.QuestData = D
 
-D.FORM_URL = "https://github.com/OGMeego/Dungeon-Planner/issues/new?template=quest-data.yml"
+D.FORM_URL = "https://github.com/OGMeego/DungeonPlanner/issues/new?template=quest-data.yml"
 D.FORMAT = 1
 D.MAX_LINES = 600      -- oldest notes go first past this
 D.MAX_CHARS = 55000    -- one form submission holds about 65,000 characters
